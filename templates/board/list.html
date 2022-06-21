@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/webproject.css">
+    <style>
+        #main {height: auto;}
+        #pgnav {text-align: center; margin-left:-100px}
+        #pgnav li {margin-left: 15px;}
+        /*페이지네이션의 현재페이지에 대한 스타일 지정*/
+        .cpage {font-weight: bold; font-size:50px; color:red}
+        /*게시판 목록 테이블 가운데 정렬*/
+        table {margin:65px auto -10px}
+
+        table {width: 75%; height: 10px; border: 1px solid black; /*border-spacing: 0px;*/
+            border-collapse: collapse; /*table-layout: fixed;*/}
+        th, td {border: 1px solid black; padding: 10px; text-align: center;}
+
+       /* table tr:nth-child(2) th:first-child {width: 10%}
+        table tr:nth-child(2) th:nth-child(2) {width: 50%}
+        table tr:nth-child(2) th:nth-child(3) {width: 15%}
+        table tr:nth-child(2) th:nth-child(4) {width: 15%}
+        table tr:nth-child(2) th:nth-child(5) {width: 10%}
+        table tr:nth-child(2) th:nth-child(2) {white-space: nowrap; }
+        table tr:nth-child(odd) {background: ivory}
+        table tr:nth-child(even) {background: skyblue}
+        table tr:hover {background: gainsboro}*/
+
+        td:nth-child(2) {white-space:nowrap; overflow: hidden; text-overflow: ellipsis;}
+        tr:first-child td {text-align: right; border-top: none; border-left: none;
+                            border-right: none !important}
+        td:nth-child(2) a:hober {color: crimson}
+        td:nth-child(2) a:active {color: crimson}
+        /*.btns {text-align: right; border-} */
+    </style>
+
+</head>
+<body>
+<div id="wrap">
+    <header>
+        <h1>Python 웹프로젝트 v01</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="join.html">회원가입</a></li>
+                <li><a href="login.html">로그인</a></li>
+                <li><a href="board.html">게시판</a></li>
+                <li><a href="myinfo.html">회원정보</a></li>
+            </ul>
+        </nav>
+        <hr>
+
+    </header>
+    <div id="main">
+        <h2>게시판</h2>
+        <table>
+
+            <colgroup> <!--테이블 컬럼 너비 지정-->
+                <col stype="width: 10%">
+                <col stype="50%">
+                <col stype="width: 15%">
+                <col stype="width: 15%">
+                <col stype="width: 10%">
+
+            </colgroup>
+
+            <tr><td colspan="5"><button type="button" onclick="location.href='write.html'">새글쓰기</button></td></tr>
+            <tr>
+                <th>번호</th><th>제목</th>
+                <th>작성자</th><th>작성일</th>
+                <th>조회</th>
+
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td><a href="view.html?bno=1">시간은 금이라구, 친구! 진짜라구, 친구! 정말이라구,친구!</a></a></td>
+                <td>abc123</td>
+                <td>2022-05-27</td>
+                <td>258</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>시간은 금이라구, 친구! 진짜라구, 친구! 정말이라구,친구!</td>
+                <td>abc123</td>
+                <td>2022-05-27</td>
+                <td>258</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>시간은 금이라구, 친구! 진짜라구, 친구! 정말이라구,친구!</td>
+                <td>abc123</td>
+                <td>2022-05-27</td>
+                <td>258</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>시간은 금이라구, 친구! 진짜라구, 친구! 정말이라구,친구!</td>
+                <td>abc123</td>
+                <td>2022-05-27</td>
+                <td>258</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>시간은 금이라구, 친구! 진짜라구, 친구! 정말이라구,친구!</td>
+                <td>abc123</td>
+                <td>2022-05-27</td>
+                <td>258</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>시간은 금이라구, 친구! 진짜라구, 친구! 정말이라구,친구!</td>
+                <td>abc123</td>
+                <td>2022-05-27</td>
+                <td>258</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>시간은 금이라구, 친구! 진짜라구, 친구! 정말이라구,친구!</td>
+                <td>abc123</td>
+                <td>2022-05-27</td>
+                <td>258</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>시간은 금이라구, 친구! 진짜라구, 친구! 정말이라구,친구!</td>
+                <td>abc123</td>
+                <td>2022-05-27</td>
+                <td>258</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>시간은 금이라구, 친구! 진짜라구, 친구! 정말이라구,친구!</td>
+                <td>abc123</td>
+                <td>2022-05-27</td>
+                <td>258</td>
+            </tr>
+
+        </table>
+
+            <ul id="pgnav">
+                <li>이전</li>
+                <li class="cpage">1</li><li>2</li>
+                <li>3</li><li>4</li>
+                <li>5</li><li>6</li>
+                <li>7</li><li>8</li>
+                <li>9</li><li>10</li>
+                <li>다음</li>
+            </ul>
+
+    </div>
+</div>
+
+
+
+    <footer>
+        <hr>
+        <span>copyright &copy; 2014.2017.siestageek. All Rights Reserved.</span>
+
+    </footer>
