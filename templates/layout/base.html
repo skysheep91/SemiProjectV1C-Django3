@@ -1,10 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>{% block tilte %}Python 웹프로젝트 v01{% endblock %}</title>
+    <link rel="stylesheet" href="{% static '/css/normalize.css' %}">
+    <link rel="stylesheet" href="/static/css/webproject.css">
+    <style>
+        {% block style %}{% endblock %}
+
+
+    </style>
+
 </head>
 <body>
+    <div id="wrap">
+        {% include 'layout/header.html' %}
+            <hr>
+             <div id="main">
+                 {% block content %}{% endblock %}
+             </div>
 
+        {% include 'layout/footer.html' %}
+
+
+    </div>
+
+    {% block jscript %}{% endblock %}
 </body>
 </html>
